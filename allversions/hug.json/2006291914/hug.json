@@ -1,0 +1,307 @@
+{
+    "build": "2006291914",
+    "for": "TFLS初中部2020届8班同学",
+    "credits": "孟庆睿 & 罗奕恒分别撰写了关于自己的情节\n孟庆睿补充了一些关于其他同学的情节\nJSON by 罗奕恒",
+    "people": {
+        "boys": {
+            "wyx": "王翊轩",
+            "mqr": "孟庆睿",
+            "cwjy": "陈王俊逸",
+            "csy": "陈思源",
+            "qt": "齐天",
+            "ht" :"胡涛",
+            "jbh": "靳博涵",
+            "zhy": "张泓洋",
+            "lcp": "刘传鹏",
+            "cxy": "陈旭阳",
+            "zbh": "张博涵",
+            "dsd": "杜圣迪",
+            "lyh": "罗奕恒",
+            "lwz": "娄文喆",
+            "lzx": "栾智翔",
+            "qzq": "祁子荃",
+            "ljs": "李佳澍"
+        },
+        "girls": {
+            "ly": "刘屹",
+            "lyt": "刘益同",
+            "wxr": "武昕冉",
+            "wyz": "汪妍竹",
+            "wsy": "王思颖",
+            "lxw": "刘晓薇",
+            "hgx": "黄淦欣",
+            "cyj": "陈奕伽",
+            "wty": "吴亭颐",
+            "csh": "陈思涵",
+            "lst": "刘书彤",
+            "lxm": "李潇曼",
+            "hr": "韩睿",
+            "dr": "戴睿",
+            "yh": "运涵",
+            "hzy": "胡泽伊",
+            "txy": "田馨雅",
+            "cyy": "崔玉莹",
+            "zzh": "赵梓涵",
+            "sjl": "邵佳琳",
+            "clp": "陈露萍",
+            "wtr": "王泰然",
+            "lxr": "李欣然"
+        }
+    },
+    "conditions": [
+        {
+            "hugger": "wxr",
+            "huggee": "mqr",
+            "message": [
+                "孟庆睿紧紧地抱住了你",
+                "他充满爱意地凝视着你",
+                "他抚摸了一下你的头",
+                "他用双手托住你的大腿和腰背，轻轻地把你抱了起来"
+            ]
+        },
+        {
+            "hugger": "wxr",
+            "huggee": "lwz",
+            "message": [
+                "你抱了娄文喆一下",
+                "他拍了你一下，他喊道：“大仙快来管管你媳妇儿。”",
+                "他试图逃跑，孟庆睿也赶了过来",
+                "孟庆睿像一堵墙一样出现在他面前，你从他的后面追了上来",
+                "他被逮到后门与后墙之间的缝隙中，怎么推门都推不动",
+                "你向他逼近，他已无路可逃",
+                "你捏了捏他的脸，打了他几下"
+            ],
+            "eval": "t.goto(25,-30);t.color(COLORS[find1[2]]);t.write('NO')"
+        },
+        {
+            "hugger": 1,
+            "huggee": "mqr",
+            "message": [
+                "你抱了孟庆睿一下",
+                "他轻轻地闭上了眼睛，对你说：",
+                "“You're a gay.”"
+            ]
+        },
+        {
+            "hugger": 2,
+            "huggee": "mqr",
+            "msgre": "(((我是|把我当成)|我(也?)[是叫])(武昕冉|小[五武]|[Ww][Xx][Rr]))|我也爱你",
+            "message": [
+                "孟庆睿紧紧地抱住了你",
+                "他充满爱意地凝视着你，仿佛真的在抱着武昕冉",
+                "他抚摸了一下你的头",
+                "他用双手托住你的大腿和腰背，轻轻地把你抱了起来"
+            ]
+        },
+        {
+            "hugger": ["lxm", "wsy", "dr"],
+            "huggee": "mqr",
+            "message": [
+                "你抱了孟庆睿一下",
+                "他被吓了一大跳，但面色依然冷漠",
+                "他说：“我等的并不是你。”"
+            ]
+        },
+        {
+            "hugger": "ly",
+            "huggee": "mqr",
+            "message": [
+                "你抱了孟庆睿一下",
+                "他被吓了一大跳，但面色依然冷漠",
+                "他说：“你就是那列不在铁轨上跑的火车吗？”"
+            ]
+        },
+        {
+            "huggee": "mqr",
+            "message": [
+                "你抱了孟庆睿一下",
+                "他用力地扭动了他的身体，推了你的肩膀",
+                "你被狠狠地推开了"
+            ],
+            "eval": "t.goto(25,-30);t.color(COLORS[find1[2]]);t.write('NO')"
+        },
+        {
+            "hugger": "mqr",
+            "huggee": "wxr",
+            "message": [
+                "你抱向了你心爱的武昕冉",
+                "她向下一躲，从你的胸前逃走了"
+            ],
+            "eval": "t.goto(25,-30);t.color(COLORS[find1[2]]);t.write('NO')",
+            "confirmed": true
+        },
+        {
+            "hugger": "lwz",
+            "huggee": "wxr",
+            "message": [
+                "你抱了娇小的武昕冉一下",
+                "她推开了你，你喊道：“大仙快来管管你媳妇儿。”",
+                "你试图逃跑，但他们俩追打了你很久",
+                "孟庆睿像一堵墙一样出现在你面前，后面的武昕冉也追了上来",
+                "你被逮到后门与后墙之间的缝隙中，怎么推门都推不动",
+                "武昕冉向你逼近，你已无路可逃",
+                "她捏了捏你的脸，打了你几下"
+            ],
+            "eval": "t.goto(25,-30);t.color(COLORS[find1[2]]);t.write('NO')"
+        },
+        {
+            "hugger": 1,
+            "huggee": "wxr",
+            "message": [
+                "你抱住了娇小的武昕冉",
+                "几秒后，一个沉重的脚步声从你后面靠近",
+                "你被狠狠地推了一下，倒在了地上，晕倒了"
+            ],
+            "eval": "t.goto(25,-30);t.color(COLORS['green']);t.write('NO')"
+        },
+        {
+            "hugger": 2,
+            "huggee": "wxr",
+            "message": [
+                "你抱住了娇小的武昕冉",
+                "几秒后，一个沉重的脚步声从你后面靠近",
+                "你感到了一丝不祥的预感.但什么也没发生"
+            ]
+        },
+        {
+            "hugger": "cwjy",
+            "huggee": "ly",
+            "message": [
+                "你与刘屹紧紧地拥抱在了一起",
+                "你与她深情地对视着，害羞地低下了头",
+                "你坐回了你的座位",
+                "她弯下腰来，轻轻地抚摸了一下你的后背",
+                "你倚靠在她胸前，甜蜜贯穿全身，心中幸福无比"
+            ],
+            "confirmed": true
+        },
+        {
+            "hugger": 1,
+            "huggee": "ly",
+            "message": [
+                "你刚抱到刘屹，她就与陈王俊逸一起对你说‘太过分了’",
+                "你试图逃跑，但他们俩追打了你很久"
+            ],
+            "eval": "for aa in range(30):{t.goto(random.randint(-300,300),random.randint(-300,300)),t.color(random.randint(0,30)*0.01,random.randint(60,100)*0.01,random.randint(0,30)*0.01),t.write('太过分了',font=(None,30),align='center')}"
+        },
+        {
+            "hugger": "ly",
+            "huggee": "cwjy",
+            "message": [
+                "你与陈王俊逸紧紧地拥抱在了一起",
+                "你与他深情地对视着，害羞地低下了头",
+                "他坐回了他的座位",
+                "你弯下腰来，轻轻地抚摸了一下他的后背",
+                "他倚靠在你胸前，甜蜜贯穿全身，心中幸福无比"
+            ],
+            "confirmed": true
+        },
+        {
+            "hugger": 2,
+            "huggee": "cwjy",
+            "message": [
+                "你刚抱到陈王俊逸，他就与刘屹一起对你说“太过分了”",
+                "你试图逃跑，但他们俩追打了你很久"
+            ],
+            "eval": "for aa in range(30):{t.goto(random.randint(-300,300),random.randint(-300,300)),t.color(random.randint(0,30)*0.01,random.randint(60,100)*0.01,random.randint(0,30)*0.01),t.write('太过分了',font=(None,30),align='center')}"
+        },
+
+
+
+        {
+            "hugger": "lyh",
+            "huggee": "dr",
+            "message": [
+                "你\u0000\u0000根\u0000\u0000本\u0000\u0000不\u0000\u0000敢\u0000\u0000去\u0000\u0000抱\u0000\u0000她\u0000\u0000，\u0000\u0000对\u0000\u0000吗\u0000\u0000？\u0000\u0000"
+            ]
+        },
+        {
+            "hugger": "lyh",
+            "huggee": "lwz",
+            "msgre": "我[^不]*爱(上?)(你|娄文喆|[Ll][Ww][Zz])",
+            "message": [
+                "你抱住了娄文喆",
+                "他瞪大了双眼看着你，脸上露出滑稽的微笑"
+            ],
+            "confirmed": true,
+            "eval": "t.goto(-25,-40)\nt.color('purple')\nif('lyh' in CUSTOM_DATA_CONTAINER):t.write('我是双性恋',font=(None,15),align='right')\nelse:t.write('我爱娄文喆',font=(None,15),align='right')\nCUSTOM_DATA_CONTAINER['lyhGay']=True"
+        },
+        {
+            "hugger": "lyh",
+            "huggee": "lwz",
+            "msgre": "我[^不]*喜欢(你|娄文喆|[Ll][Ww][Zz])",
+            "message": [
+                "你抱住了娄文喆",
+                "他瞪大了双眼看着你，脸上露出滑稽的微笑"
+            ],
+            "eval": "t.goto(-25,-40)\nt.color('purple')\nif('lyh' in CUSTOM_DATA_CONTAINER):t.write('我是双性恋',font=(None,15),align='right')\nelse:t.write('我喜欢娄文喆',align='right')\nCUSTOM_DATA_CONTAINER['lyhGay']=True"
+        },
+        {
+            "hugger": "lyh",
+            "huggee": "lwz",
+            "message": [
+                "你抱住了娄文喆",
+                "他好像已经习惯了"
+            ]
+        },
+        {
+            "hugger": "lyh",
+            "huggee": "lxm",
+            "msgre": "我[^不]*(喜欢|爱(上?))(你|李潇曼|[Ll][Xx][Mm])",
+            "message": [
+                "你那是馋她身子",
+                "你下贱"
+            ],
+            "eval": "t.goto(-25,-40)\nt.color(COLORS[1])\nif('lyhGay' in CUSTOM_DATA_CONTAINER):t.write('我是双性恋',font=(None,15),align='right')\nelse:t.write('我有..点喜欢李潇曼？',align='right')\nCUSTOM_DATA_CONTAINER['lyh']=True"
+        },
+        {
+            "hugger": "dsd",
+            "huggee": "lxm",
+            "message": [
+                "你抱住了娇小的李潇曼",
+                "她脸红了，对你喊道：",
+                "“渣男！yh、wty甩你了？”"
+            ],
+            "eval": "t.goto(25,-30);t.color(COLORS[find1[2]]);t.write('NO')"
+        },
+        {
+            "hugger": "jbh",
+            "huggee": "lxm",
+            "message": [
+                "你抱住了娇小的李潇曼",
+                "她脸红了，对你喊道：“流氓！",
+                "mqr说你和杜圣迪对我有大胆的想法”"
+            ],
+            "eval": "t.goto(25,-30);t.color(COLORS[find1[2]]);t.write('NO')"
+        },
+        {
+            "hugger": ["dr", "lxm"],
+            "huggee": "lyh",
+            "message": [
+                "你抱住了罗奕恒",
+                "他差点当场被吓死"
+            ]
+        },
+        {
+            "hugger": "wxr",
+            "huggee": "lyh",
+            "message": [
+                "你抱住了罗奕恒",
+                "他吓了一大跳",
+                "他说：“最想被你抱的人不是我。”"
+            ]
+        },
+        {
+            "hugger": 2,
+            "huggee": "lyh",
+            "message": [
+                "你抱住了罗奕恒",
+                "他吓了一大跳"
+            ]
+        }
+    ],
+    "nameees": {
+        "wyh": "???",
+        "王沿红": "???"
+    }
+}
