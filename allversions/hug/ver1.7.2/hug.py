@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from random import *
 import turtle
 import time
@@ -7,14 +5,41 @@ lyhgl=0
 lyhbl=0
 lyhbg=0
 times=0
+yellow=0
+t1,t2=0.03,0.5
 x=""
 a=""
 b=""
 boys=["wyx","WYX","王翊轩","mqr","MQR","孟庆睿","cwjy","CWJY","陈王俊逸","csy","CSY","陈思源","qt","QT","齐天","ht","HT","胡涛","jbh","JBH","靳博涵","zhy","ZHY","张泓洋","lcp","LCP","刘传鹏","cxy","CXY","陈旭阳","zbh","ZBH","张博涵","dsd","DSD","杜圣迪","lyh","LYH","罗奕恒","lwz","LWZ","娄文喆","lzx","LZX","栾智翔","qzq","QZQ","祁子荃","ljs","LJS","李佳澍","yns","YNS","伊楠斯"]
 girls=["ly","LY","刘屹","lyt","LYT","刘益同","wxr","WXR","武昕冉","wyz","WYZ","汪妍竹","wsy","WSY","王思颖","lxw","LXW","刘晓薇","hgx","HGX","黄淦欣","cyj","CYJ","陈奕伽","wty","WTY","吴亭颐","csh","CSH","陈思涵","lst","LST","刘书彤","lxm","LXM","李潇曼","hr","HR","韩睿","dr","DR","戴睿","yh","YH","运涵","hzy","HZY","胡泽伊","txy","TXY","田馨雅","cyy","CYY","崔玉莹","zzh","ZZH","赵梓涵","sjl","SJL","邵佳琳","clp","CLP","陈露萍","wtr","WTR","王泰然","lxr","LXR","李欣然","mgl","MGL","梅古里"]
 ls=boys+girls
-gendera=0
-genderb=0
+rd=["random","rd","rand","r"]
+def heart(n,m):
+    t.up()
+    t.goto(n,m)
+    t.down()
+    t.begin_fill()
+    t.circle(10,195)
+    t.goto(n-16,m-11)
+    t.goto(n-12,m-18)
+    t.goto(n-8,m-23)
+    t.goto(n-4,m-27)
+    t.goto(n,m-30)
+    t.up()
+    t.goto(n,m)
+    t.down()
+    t.right(195)
+    t.circle(-10,195)
+    t.goto(n+16,m-11)
+    t.goto(n+12,m-18)
+    t.goto(n+8,m-23)
+    t.goto(n+4,m-27)
+    t.goto(n,m-30)
+    t.end_fill()
+    t.right(-195)
+    t.up()
+def rdperson():
+    return choice(ls)
 def conv(x1,x2,x3,a):#首字母转换器
     if a in [x1,x2]:
         return x3
@@ -30,7 +55,7 @@ def per(text1,text2):
             p("啊这，二刺螈?")
         if ee=="1" and a in["wyh","WYH","王沿红"]:
             p("? ? ?")
-        if a in ["random","rd","rand","r"] or (a=="" and mode=="1"):
+        if a in rd or (a=="" and mode=="1"):
             a=rdperson()
         for o in range(42):
             a=conv(ls[0+3*o],ls[1+3*o],ls[2+3*o],a)
@@ -46,22 +71,16 @@ def per(text1,text2):
         if gendera in [1,2]:
             break
     return a,gendera
-def rdperson():
-    return choice(ls)
 def p(text,end="\n"):
     for i in range(len(text)):
         print(text[i], end='',flush=True)
-        time.sleep(0.03)
-    time.sleep(0.5)
+        time.sleep(t1)
+    time.sleep(t2)
     print(end,end='')
-print("抱一抱_VER1.7.1")
+print("抱一抱_VER1.7.2")
 mode=input("按Enter继续(下同)")
 if mode in ["1","2"]:
-    def p(text,end="\n"):
-        for i in range(len(text)):
-            print(text[i], end='',flush=True)
-        time.sleep(0)
-        print(end,end='')
+    t1,t2=0,0
     if mode=="1":
         p("Fast mode on")
     if mode=="2":
@@ -75,6 +94,8 @@ else:
     while True:
         p("是否开启彩蛋模式 (1)是 (2)否")
         ee=input("输入一个数字进行选择")
+        if ee in rd or (ee=="" and mode=="1"):
+            ee=choice(["1","2"])
         if ee in ["1","2"]:#eastereggs
             break
 #a for hugger;b for huggee;gendera for hugger;genderb for huggee;1 for boys;2 for girls
@@ -87,10 +108,13 @@ while True:
     per2=per("你想拥抱谁:","你想抱的人不在TFLS 17届8班,请重新输入")
     b=per2[0]
     genderb=per2[1]
+    rdsay=["","","","","我是"+rdperson(),"我叫"+rdperson(),"我喜欢你","我喜欢上"+b,"我完全爱上"+b,"我喜欢"+b,"我想抱你","我想上"+b]
     if mode=="2":
-        d=choice(["","","","","我是"+rdperson(),"我叫"+rdperson(),"我喜欢你","我喜欢上"+b,"我完全爱上"+b,"我喜欢"+b,"我想抱你","我想上"+b])
+        d=choice(rdsay)
     elif a!=b:
         d=input("你想对"+b+"说什么?")
+        if d in rd or (d=="" and mode=="1"):
+            d=choice(rdsay)
     else:
         d=""
     if b in ["刘屹","刘益同","武昕冉","汪妍竹","王思颖","刘晓薇","黄淦欣","陈奕伽","吴亭颐","陈思涵","刘书彤","李潇曼","韩睿","戴睿","运涵","胡泽伊","田馨雅","崔玉莹","赵梓涵","邵佳琳","陈露萍","王泰然","李欣然","梅古里"]:
@@ -99,7 +123,7 @@ while True:
         p(a+"自'抱'自弃")
     else:
         if genderb==2 and ee=="1" and (d[0:4]=="我喜欢上" or d[0:4]=="我愿意上" or d[0:3]=="我想上" or d[0:3]=="我爱上"):
-            p("抱一抱_ver1.7:“我还是白的吧”")#easteregg1
+            p("抱一抱_ver1.7.2:“我还是白的吧”")#easteregg1
             y=11
         elif b=="孟庆睿":        
             if a=="武昕冉":
@@ -362,155 +386,113 @@ while True:
     if times==0:
         t=turtle.Turtle()
         turtle.title("抱一抱_ver1.7")
-    if gendera!=0:
-        t.up()
-        t.goto(0,0)
-        t.st()
-        t.seth(0)
-        t.speed(6)          
-        t.color("red")
-        t.left(90)
-        t.pensize(1)
-        t.down()
-        t.begin_fill()
-        t.circle(10,195)
-        t.goto(-16,-11)
-        t.goto(-12,-18)
-        t.goto(-8,-23)
-        t.goto(-4,-27)
-        t.goto(0,-30)
-        t.up()
-        t.goto(0,0)
-        t.down()
-        t.right(195)
-        t.circle(-10,195)
-        t.goto(16,-11)
-        t.goto(12,-18)
-        t.goto(8,-23)
-        t.goto(4,-27)
-        t.goto(0,-30)
-        t.end_fill()
-        t.right(-195)
-        t.up()
-        t.goto(-22,-20)
-        if gendera==1:
-            t.color(0.3,0.6,1)
-        else:
-            t.color(0.9,0.1,0.6)
-        t.write(a,font=("none",20),align="right")
-        t.goto(22,-20)
+    t.up()
+    t.st()
+    t.seth(90)
+    t.speed(6)          
+    t.color("red")
+    t.pensize(1)
+    heart(0,0)
+    t.goto(-22,-20)
+    if gendera==1:
+        t.color(0.3,0.6,1)
+    else:
+        t.color(0.9,0.1,0.6)
+    t.write(a,font=("none",20),align="right")
+    t.goto(22,-20)
+    if genderb==1:
+        t.color(0.3,0.6,1)
+    else:
+        t.color(0.9,0.1,0.6)
+    t.write(b,font=("none",20))
+    t.ht()
+    t.goto(-22,-45)
+    if gendera==1:
+        t.color(0.3,0.6,1)
+    else:
+        t.color(0.9,0.1,0.6)
+    t.write(d,font=("none",20),align="right")
+    if y==1:
+        t.goto(30,-40)
         if genderb==1:
             t.color(0.3,0.6,1)
         else:
             t.color(0.9,0.1,0.6)
-        t.write(b,font=("none",20))
-        t.ht()
-        t.goto(-22,-45)
-        if gendera==1:
-            t.color(0.3,0.6,1)
-        else:
-            t.color(0.9,0.1,0.6)
-        t.write(d,font=("none",20),align="right")
-        if y==1:
-            t.goto(30,-40)
-            if genderb==1:
-                t.color(0.3,0.6,1)
-            else:
-                t.color(0.9,0.1,0.6)
-            t.write("NO",font=("none",20))
-        if y==2:
-            t.goto(-10,40)
-            t.color(0,0.6,0)
-            t.write("NO",font=("none",15))
-        if y==3:
-            t.goto(30,-40)
-            t.color(0.3,0.6,1)
-            t.write("I have already loved another girl",font=("none",8))
-            t.goto(30,-60)
-            t.write("And you have already loved another boy,too",font=("none",8))
-        if y==4 or z==1:
-            for aa in range(50):
-                t.goto(randint(-300,300),randint(-300,300))
-                t.color(randint(0,30)*0.01,randint(60,100)*0.01,randint(0,30)*0.01)
-                t.write("太过分了",font=("Arial",30))
-        if y==5:
-            t.goto(30,-40)
-            t.color(0.3,0.6,1)
-            t.write("I have already loved another girl",font=("none",8))
-        if y==6 and lyhbg!=1:
-            t.goto(-25,-60)
-            t.write("我有..点喜欢李潇曼？",font=("none",8),align="right")
-        if y==7 and lyhbg!=1:
-            t.goto(-25,-60)
-            t.write("我爱娄文喆",font=("none",15),align="right")
-        if y==8 and lyhbg!=1:
-            t.goto(-25,-60)
-            t.write("我喜欢娄文喆",font=("none",15),align="right")
-        if lyhbg==1 and a=="罗奕恒" and 6<=y<=8:
-            t.goto(-25,-60)
-            t.write("我是双性恋",font=("none",15),align="right")
-        if y==9 and z!=1:
-            t.speed(0)
-            for k in range(10):
-                n=randint(-300,300)
-                m=randint(-300,300)
-                t.color(randint(80,100)*0.01,randint(0,20)*0.01,randint(0,100)*0.01)
-                t.up()
-                t.goto(n,m)
-                t.down()
-                t.begin_fill()
-                t.circle(10,195)
-                t.goto(n-16,m-11)
-                t.goto(n-12,m-18)
-                t.goto(n-8,m-23)
-                t.goto(n-4,m-27)
-                t.goto(n,m-30)
-                t.up()
-                t.goto(n,m)
-                t.down()
-                t.right(195)
-                t.circle(-10,195)
-                t.goto(n+16,m-11)
-                t.goto(n+12,m-18)
-                t.goto(n+8,m-23)
-                t.goto(n+4,m-27)
-                t.goto(n,m-30)
-                t.end_fill()
-                t.right(-195)
-            t.speed(6)
-        if y==10:
-            t.pensize(5)
-            for k in range(20):
-                t.seth(0)
-                n=randint(-300,300)
-                m=randint(-300,300)
-                o=randint(20,30)
-                t.color(randint(20,40)*0.01,randint(20,40)*0.01,randint(80,100)*0.01)
-                t.up()
-                t.goto(n,m)
-                t.down()
-                t.circle(o,360)
-                t.up()
-                t.goto(n+0.7*o,m+1.7*o)
-                t.down()
-                t.goto(n+3*o,m+4*o)
-                t.goto(n+1.7*o,m+3.9*o)
-                t.goto(n+3*o,m+4*o)
-                t.goto(n+2.9*o,m+2.7*o)
-                t.up()
-        if y==11:#yellow
-            turtle.title("抱一抱_ver1.7:Yellow")
-            t.goto(-75,150)
-            t.color(1,0.82,0.1)
-            t.write("? ? ? ? ? ?",font=("none",30))
-            t.goto(30,-45)
-            t.color(0.9,0.1,0.6)
-            t.write("啊--啊---啊你不要过来呀",font=("none",12))
-            t.goto(0,0)
-            time.sleep(2)
-            for k in range(36):
-                t.goto(10*k,0)
-                turtle.bgcolor(1,1,1-0.02*k)
+        t.write("NO",font=("none",20))
+    if y==2:
+        t.goto(-10,40)
+        t.color(0,0.6,0)
+        t.write("NO",font=("none",15))
+    if y==3:
+        t.goto(30,-40)
+        t.color(0.3,0.6,1)
+        t.write("I have already loved another girl",font=("none",8))
+        t.goto(30,-60)
+        t.write("And you have already loved another boy,too",font=("none",8))
+    if y==4 or z==1:
+        for aa in range(50):
+            t.goto(randint(-300,300),randint(-300,300))
+            t.color(randint(0,30)*0.01,randint(60,100)*0.01,randint(0,30)*0.01)
+            t.write("太过分了",font=("Arial",30))
+    if y==5:
+        t.goto(30,-40)
+        t.color(0.3,0.6,1)
+        t.write("I have already loved another girl",font=("none",8))
+    if y==6 and lyhbg!=1:
+        t.goto(-25,-60)
+        t.write("我有..点喜欢李潇曼？",font=("none",8),align="right")
+    if y==7 and lyhbg!=1:
+        t.goto(-25,-60)
+        t.write("我爱娄文喆",font=("none",15),align="right")
+    if y==8 and lyhbg!=1:
+        t.goto(-25,-60)
+        t.write("我喜欢娄文喆",font=("none",15),align="right")
+    if lyhbg==1 and a=="罗奕恒" and 6<=y<=8:
+        t.goto(-25,-60)
+        t.write("我是双性恋",font=("none",15),align="right")
+    if y==9 and z!=1:
+        t.speed(0)
+        for k in range(10):
+            t.color(randint(80,100)*0.01,randint(0,20)*0.01,randint(0,100)*0.01)
+            heart(randint(-300,300),randint(-300,300))
+        t.speed(6)
+    if y==10:
+        t.pensize(5)
+        for k in range(20):
+            t.seth(0)
+            n=randint(-300,300)
+            m=randint(-300,300)
+            o=randint(20,30)
+            t.color(randint(20,40)*0.01,randint(20,40)*0.01,randint(80,100)*0.01)
+            t.up()
+            t.goto(n,m)
+            t.down()
+            t.circle(o,360)
+            t.up()
+            t.goto(n+0.7*o,m+1.7*o)
+            t.down()
+            t.goto(n+3*o,m+4*o)
+            t.goto(n+1.7*o,m+3.9*o)
+            t.goto(n+3*o,m+4*o)
+            t.goto(n+2.9*o,m+2.7*o)
+            t.up()
+    if y==11:#yellow
+        if yellow<=0.99:
+            yellow+=0.01
+        turtle.title("抱一抱_ver1.7:Yellow")
+        t.goto(-75,150)
+        t.color(1,0.82,0.1)
+        t.write("? ? ? ? ? ?",font=("none",30))
+        t.goto(30,-45)
+        t.color(0.9,0.1,0.6)
+        t.write("啊--啊---啊你不要过来呀",font=("none",12))
+        t.goto(0,0)
+        time.sleep(2)
+        for k in range(100):
+            time.sleep(0.02)
+            turtle.bgcolor(1,1,1-yellow-0.01*k)
+            if 1-yellow-0.01*k<=0.01:
+                break
     times+=1
     if mode=="2":
         ee=choice(["1","2"])
@@ -518,6 +500,8 @@ while True:
         while True:
             print("(1)重新开始 (2)退出 (3)关闭彩蛋模式并重新开始")
             x=input("输入一个数字进行选择")
+            if x in rd:
+                x=choice(["1","3"])
             if x in ["1","2","3"]:
                 break
             if mode=="1" and x=="":
@@ -528,6 +512,8 @@ while True:
         while True:
             print("(1)重新开始 (2)退出 (3)开启彩蛋模式并重新开始")
             x=input("输入一个数字进行选择")
+            if x in rd:
+                x=choice(["1","3"])
             if x in ["1","2","3"]:
                 break
             if mode=="1" and x=="":
@@ -537,7 +523,7 @@ while True:
     if mode=="2":
         time.sleep(0.5)
     t.clear()
-    turtle.bgcolor(1,1,1)
+    turtle.bgcolor(1,1,1-yellow)
     turtle.title("抱一抱_ver1.7")
     if x=="2":
         break
