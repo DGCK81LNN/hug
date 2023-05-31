@@ -1,0 +1,501 @@
+{
+    "build": "2305311843",
+    "for": "X校初中部2020届X班同学（真实姓名削除）",
+    "credits": "原剧情匹配规则由天府灵山行者和DGCK81LNN于2020年撰写\nJSON by DGCK81LNN\n所有同学姓名已经过混淆处理，真实姓名已削除",
+    "people": {
+        "boys": {
+            "wyx": "王宇学",
+            "mqr": "马强瑞",
+            "cjy": "陈杰宇",
+            "csy": "陈松宇",
+            "qt": "齐涛",
+            "ht" :"黄涛",
+            "jbh": "贾博浩",
+            "zhy": "张浩宇",
+            "lcp": "刘才平",
+            "cxy": "陈学宇",
+            "zbh": "张博浩",
+            "dsd": "董松东",
+            "lyh": "刘宇浩",
+            "lwz": "刘伟哲",
+            "lzx": "刘哲学",
+            "qzq": "齐哲强",
+            "ljs": "刘杰松",
+
+            "yns": "伊楠斯"
+        },
+        "girls": {
+            "ly": "刘雅",
+            "lyt": "刘雅婷",
+            "wxr": "王雪茹",
+            "wyz": "王雅紫",
+            "wsy": "王淑雅",
+            "lxw": "刘雪雯",
+            "hgx": "黄桂雪",
+            "cyj": "陈雅佳",
+            "wty": "王婷雅",
+            "csh": "陈淑海",
+            "lst": "刘淑婷",
+            "lxm": "刘雪梦",
+            "hr": "黄茹",
+            "dr": "董茹",
+            "yh": "杨海",
+            "hzy": "黄紫雅",
+            "txy": "唐雪雅",
+            "cyy": "陈雅雅",
+            "zzh": "张紫海",
+            "sjl": "宋佳琳",
+            "clp": "陈琳佩",
+            "wtr": "王婷茹",
+            "lxr": "刘雪茹",
+
+            "mgl": "梅古里"
+        }
+    },
+    "conditions": [
+        {
+            "msgre": "(^|[^欢爱])上.*[^了]$",
+            "message": [
+                "你要上什么？？？"
+            ],
+            "eval": "t.goto(-75,150)\nt.color(1,0.82,0.1)\nt.write(\"? ? ? ? ? ?\",font=(\"none\",30))\nt.goto(30,-45)\nt.color(0.9,0.1,0.6)\nt.write(\"啊--啊---啊你不要过来呀\",font=(\"none\",12))\nt.goto(0,0)\ntime.sleep(2)\nfor k in range(36):\n    t.goto(10*k,0)\n    turtle.bgcolor(1,1,1-0.02*k)"
+        },
+        {
+            "msgre": "(我爱|喜欢)上.*[^了]$",
+            "message": [
+                "断句，请？？？"
+            ],
+            "eval": "t.goto(-75,150)\nt.color(1,0.82,0.1)\nt.write(\"? ? ? ? ? ?\",font=(\"none\",30))\nt.goto(30,-45)\nt.color(0.9,0.1,0.6)\nt.write(\"啊--啊---啊你不要过来呀\",font=(\"none\",12))\nt.goto(0,0)\ntime.sleep(2)\nfor k in range(36):\n    t.goto(10*k,0)\n    turtle.bgcolor(1,1,1-0.02*k)"
+        },
+        {
+            "msgre": "fuck|shit|bitch",
+            "message": [
+                "注意你的言辞！"
+            ]
+        },
+
+
+
+        {
+            "hugger": "mgl",
+            "huggee": "yns",
+            "message": [
+                "你从水中跑向站在沙滩上看着大海的伊楠斯，扑过去抱住了他",
+                "你与他紧紧地贴在了一起，可以感知到彼此的心跳在加速",
+                "他托住你的腰和大腿，用公主抱的姿势把你抱了起来",
+                "过了一小会儿，他轻轻地把你放在沙滩上，躺在你身旁，拉着你的手",
+                "你看着辽阔的大海，回忆起今年春夏和他的每一次共处"
+            ],
+            "confirmed": true,
+            "eval": "t.speed(0)\nt.seth(90)\nfor k in range(20):\n n=random.randint(-300,300)\n m=random.randint(-300,300)\n t.color(random.randint(80,100)*0.01,random.randint(0,20)*0.01,random.randint(0,100)*0.01)\n t.up()\n t.goto(n,m)\n t.down()\n t.begin_fill()\n t.circle(10,195)\n t.goto(n-16,m-11)\n t.goto(n-12,m-18)\n t.goto(n-8,m-23)\n t.goto(n-4,m-27)\n t.goto(n,m-30)\n t.up()\n t.goto(n,m)\n t.down()\n t.right(195)\n t.circle(-10,195)\n t.goto(n+16,m-11)\n t.goto(n+12,m-18)\n t.goto(n+8,m-23)\n t.goto(n+4,m-27)\n t.goto(n,m-30)\n t.end_fill()\n t.right(-195)\nt.speed(6)"
+        },
+        {
+            "hugger": "yns",
+            "huggee": "mgl",
+            "message": [
+                "梅古里从水中跑向站在沙滩上看着大海的你，扑过去抱住了你",
+                "你与她紧紧地贴在了一起，可以感知到彼此的心跳在加速",
+                "你托住她的腰和大腿，用公主抱的姿势把她抱了起来",
+                "过了一小会儿，你轻轻地把她放在沙滩上，躺在她身旁，拉着她的手",
+                "你看着辽阔的大海，回忆起今年春夏和她的每一次共处"
+            ],
+            "confirmed": true,
+            "eval": "t.speed(0)\nt.seth(90)\nfor k in range(20):\n n=random.randint(-300,300)\n m=random.randint(-300,300)\n t.color(random.randint(80,100)*0.01,random.randint(0,20)*0.01,random.randint(0,100)*0.01)\n t.up()\n t.goto(n,m)\n t.down()\n t.begin_fill()\n t.circle(10,195)\n t.goto(n-16,m-11)\n t.goto(n-12,m-18)\n t.goto(n-8,m-23)\n t.goto(n-4,m-27)\n t.goto(n,m-30)\n t.up()\n t.goto(n,m)\n t.down()\n t.right(195)\n t.circle(-10,195)\n t.goto(n+16,m-11)\n t.goto(n+12,m-18)\n t.goto(n+8,m-23)\n t.goto(n+4,m-27)\n t.goto(n,m-30)\n t.end_fill()\n t.right(-195)\nt.speed(6)"
+        },
+        {
+            "hugger": "mqr",
+            "huggee": "yns",
+            "message": [
+                "你抱住了你的幻想",
+                "你的初二初三时的回忆、幻想、心理、人格与他发生了强烈的共鸣"
+            ]
+        },
+        {
+            "hugger": "mqr",
+            "huggee": "mgl",
+            "message": [
+                "你抱住了你的幻想",
+                "你的初一下学期时的回忆、幻想、心理、人格与她发生了强烈的共鸣"
+            ]
+        },
+        {
+            "hugger": "mgl",
+            "huggee": "mqr",
+            "message": [
+                "你抱住了创造了你的“上帝”",
+                "他的初一下学期时的回忆、幻想、心理、人格与你发生了强烈的共鸣"
+            ]
+        },
+        {
+            "hugger": "yns",
+            "huggee": "mqr",
+            "message": [
+                "你抱住了创造了你的“上帝”",
+                "他的初二初三时的回忆、幻想、心理、人格与你发生了强烈的共鸣"
+            ]
+        },
+        {
+            "huggee": ["mgl", "yns"],
+            "message": [
+                "你撞上了次元壁"
+            ]
+        },
+        {
+            "hugger": ["mgl", "yns"],
+            "message": [
+                "你撞上了次元壁"
+            ]
+        },
+
+
+
+        {
+            "hugger": "wxr",
+            "huggee": "mqr",
+            "message": [
+                "马强瑞紧紧地抱住了你",
+                "他充满爱意地凝视着你",
+                "他抚摸了一下你的头",
+                "他用双手托住你的大腿和腰背，轻轻地把你抱了起来"
+            ]
+        },
+        {
+            "hugger": "wxr",
+            "huggee": "lwz",
+            "message": [
+                "你抱了刘伟哲一下",
+                "他拍了你一下，他喊道：“大仙快来管管你媳妇儿。”",
+                "他试图逃跑，马强瑞也赶了过来",
+                "马强瑞像一堵墙一样出现在他面前，你从他的后面追了上来",
+                "他被逮到后门与后墙之间的缝隙中，怎么推门都推不动",
+                "你向他逼近，他已无路可逃",
+                "你捏了捏他的脸，打了他几下"
+            ],
+            "eval": "t.goto(25,-30);t.color(COLORS[find1[2]]);t.write('NO')"
+        },
+        {
+            "hugger": 1,
+            "huggee": "mqr",
+            "message": [
+                "你抱了马强瑞一下",
+                "他轻轻地闭上了眼睛，对你说：",
+                "“You're a gay.”"
+            ]
+        },
+        {
+            "hugger": 2,
+            "huggee": "mqr",
+            "msgre": "(((我是|把我当成)|我(也?)[是叫])(王雪茹|小[五武]|[Ww][Xx][Rr]))|我也爱你",
+            "message": [
+                "马强瑞紧紧地抱住了你",
+                "他充满爱意地凝视着你，仿佛真的在抱着王雪茹",
+                "他抚摸了一下你的头",
+                "他用双手托住你的大腿和腰背，轻轻地把你抱了起来"
+            ]
+        },
+        {
+            "hugger": ["lxm", "wsy", "dr"],
+            "huggee": "mqr",
+            "message": [
+                "你抱了马强瑞一下",
+                "他被吓了一大跳，但面色依然冷漠",
+                "他说：“我等的并不是你。”"
+            ]
+        },
+        {
+            "hugger": "ly",
+            "huggee": "mqr",
+            "message": [
+                "你抱了马强瑞一下",
+                "他被吓了一大跳，但面色依然冷漠",
+                "他说：“你就是那列不在铁轨上跑的火车吗？”"
+            ]
+        },
+        {
+            "huggee": "mqr",
+            "message": [
+                "你抱了马强瑞一下",
+                "他用力地扭动了他的身体，推了你的肩膀",
+                "你被狠狠地推开了"
+            ],
+            "eval": "t.goto(25,-30);t.color(COLORS[find1[2]]);t.write('NO')"
+        },
+
+
+
+        {
+            "hugger": "dsd",
+            "huggee": "wty",
+            "message": [
+                "你抱住了王婷雅",
+                "OHHHHHHH"
+            ],
+            "confirmed": true,
+            "eval": "t.speed(0)\nfor k in range(10):\n    n=random.randint(-300,300)\n    m=random.randint(-300,300)\n    t.color(random.randint(80,100)*0.01,random.randint(0,20)*0.01,random.randint(0,100)*0.01)\n    t.up()\n    t.goto(n,m)\n    t.down()\n    t.begin_fill()\n    t.circle(10,195)\n    t.goto(n-16,m-11)\n    t.goto(n-12,m-18)\n    t.goto(n-8,m-23)\n    t.goto(n-4,m-27)\n    t.goto(n,m-30)\n    t.up()\n    t.goto(n,m)\n    t.down()\n    t.right(195)\n    t.circle(-10,195)\n    t.goto(n+16,m-11)\n    t.goto(n+12,m-18)\n    t.goto(n+8,m-23)\n    t.goto(n+4,m-27)\n    t.goto(n,m-30)\n    t.end_fill()\n    t.right(-195)\nt.speed(6)"
+        },
+        {
+            "hugger": "wty",
+            "huggee": "dsd",
+            "message": [
+                "你抱住了董松东",
+                "OHHHHHHH"
+            ],
+            "confirmed": true,
+            "eval": "t.speed(0)\nfor k in range(10):\n    n=random.randint(-300,300)\n    m=random.randint(-300,300)\n    t.color(random.randint(80,100)*0.01,random.randint(0,20)*0.01,random.randint(0,100)*0.01)\n    t.up()\n    t.goto(n,m)\n    t.down()\n    t.begin_fill()\n    t.circle(10,195)\n    t.goto(n-16,m-11)\n    t.goto(n-12,m-18)\n    t.goto(n-8,m-23)\n    t.goto(n-4,m-27)\n    t.goto(n,m-30)\n    t.up()\n    t.goto(n,m)\n    t.down()\n    t.right(195)\n    t.circle(-10,195)\n    t.goto(n+16,m-11)\n    t.goto(n+12,m-18)\n    t.goto(n+8,m-23)\n    t.goto(n+4,m-27)\n    t.goto(n,m-30)\n    t.end_fill()\n    t.right(-195)\nt.speed(6)"
+        },
+        {
+            "hugger": 1,
+            "huggee": "dsd",
+            "message": [
+                "Ah♂ that's good"
+            ],
+            "eval": "t.pensize(5)\nfor k in range(20):\n    t.seth(0)\n    n=random.randint(-300,300)\n    m=random.randint(-300,300)\n    o=random.randint(20,30)\n    t.color(random.randint(20,40)*0.01,random.randint(20,40)*0.01,random.randint(80,100)*0.01)\n    t.up()\n    t.goto(n,m)\n    t.down()\n    t.circle(o,360)\n    t.up()\n    t.goto(n+0.7*o,m+1.7*o)\n    t.down()\n    t.goto(n+3*o,m+4*o)\n    t.goto(n+1.7*o,m+3.9*o)\n    t.goto(n+3*o,m+4*o)\n    t.goto(n+2.9*o,m+2.7*o)\n    t.up()"
+        },
+        {
+            "hugger": 1,
+            "huggee": "wty",
+            "message": [
+                "???"
+            ]
+        },
+
+
+
+        {
+            "hugger": "mqr",
+            "huggee": "wxr",
+            "message": [
+                "你抱向了你心爱的王雪茹",
+                "她向下一躲，从你的胸前逃走了"
+            ],
+            "eval": "t.goto(25,-30);t.color(COLORS[find1[2]]);t.write('NO')",
+            "confirmed": true
+        },
+        {
+            "hugger": "lwz",
+            "huggee": "wxr",
+            "message": [
+                "你抱了娇小的王雪茹一下",
+                "她推开了你，你喊道：“大仙快来管管你媳妇儿。”",
+                "你试图逃跑，但他们俩追打了你很久",
+                "马强瑞像一堵墙一样出现在你面前，后面的王雪茹也追了上来",
+                "你被逮到后门与后墙之间的缝隙中，怎么推门都推不动",
+                "王雪茹向你逼近，你已无路可逃",
+                "她捏了捏你的脸，打了你几下"
+            ],
+            "eval": "t.goto(25,-30);t.color(COLORS[find1[2]]);t.write('NO')"
+        },
+        {
+            "hugger": "yh",
+            "huggee": "wxr",
+            "message": [
+                "你抱住了王雪茹",
+                "她紧紧地贴着你",
+                "突然...",
+                "时\u0000\u0000\u0000空\u0000\u0000\u0000发\u0000\u0000\u0000生\u0000\u0000\u0000错\u0000\u0000\u0000乱\u0000\u0000\u0000.\u0000\u0000\u0000.\u0000\u0000\u0000.\u0000\u0000\u0000\u0000\u0000\u0000",
+                "你与她被传送回2019年4月23日的X校\u0000\u0000\u0000.\u0000\u0000\u0000.\u0000\u0000\u0000.\u0000\u0000\u0000\u0000\u0000\u0000",
+                "时\u0000\u0000\u0000空\u0000\u0000\u0000发\u0000\u0000\u0000生\u0000\u0000\u0000错\u0000\u0000\u0000乱\u0000\u0000\u0000.\u0000\u0000\u0000.\u0000\u0000\u0000.\u0000\u0000\u0000\u0000\u0000\u0000",
+                "你与她被传送回2018年4月24日的X校\u0000\u0000\u0000.\u0000\u0000\u0000.\u0000\u0000\u0000.\u0000\u0000\u0000\u0000\u0000\u0000",
+                "真\u0000\u0000\u0000\u0000\u0000\u0000是\u0000\u0000\u0000\u0000\u0000\u0000奇\u0000\u0000\u0000\u0000\u0000\u0000怪\u0000\u0000\u0000\u0000\u0000\u0000的\u0000\u0000\u0000\u0000\u0000\u0000日\u0000\u0000\u0000\u0000\u0000\u0000子\u0000\u0000\u0000\u0000\u0000\u0000.\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000.\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000.\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+            ]
+        },
+        {
+            "hugger": "wxr",
+            "huggee": "yh",
+            "message": [
+                "你抱住了杨海",
+                "你紧紧地贴着她",
+                "突然...",
+                "时\u0000\u0000\u0000空\u0000\u0000\u0000发\u0000\u0000\u0000生\u0000\u0000\u0000错\u0000\u0000\u0000乱\u0000\u0000\u0000.\u0000\u0000\u0000.\u0000\u0000\u0000.\u0000\u0000\u0000\u0000\u0000\u0000",
+                "你与她被传送回2019年4月23日的X校\u0000\u0000\u0000.\u0000\u0000\u0000.\u0000\u0000\u0000.\u0000\u0000\u0000\u0000\u0000\u0000",
+                "时\u0000\u0000\u0000空\u0000\u0000\u0000发\u0000\u0000\u0000生\u0000\u0000\u0000错\u0000\u0000\u0000乱\u0000\u0000\u0000.\u0000\u0000\u0000.\u0000\u0000\u0000.\u0000\u0000\u0000\u0000\u0000\u0000",
+                "你与她被传送回2018年4月24日的X校\u0000\u0000\u0000.\u0000\u0000\u0000.\u0000\u0000\u0000.\u0000\u0000\u0000\u0000\u0000\u0000",
+                "真\u0000\u0000\u0000\u0000\u0000\u0000是\u0000\u0000\u0000\u0000\u0000\u0000奇\u0000\u0000\u0000\u0000\u0000\u0000怪\u0000\u0000\u0000\u0000\u0000\u0000的\u0000\u0000\u0000\u0000\u0000\u0000日\u0000\u0000\u0000\u0000\u0000\u0000子\u0000\u0000\u0000\u0000\u0000\u0000.\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000.\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000.\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+            ]
+        },
+        {
+            "hugger": 1,
+            "huggee": "wxr",
+            "message": [
+                "你抱住了娇小的王雪茹",
+                "几秒后，一个沉重的脚步声从你后面靠近",
+                "你被狠狠地推了一下，倒在了地上，晕倒了"
+            ],
+            "eval": "t.goto(25,-30);t.color(COLORS['green']);t.write('NO')"
+        },
+        {
+            "hugger": 2,
+            "huggee": "wxr",
+            "message": [
+                "你抱住了娇小的王雪茹",
+                "几秒后，一个沉重的脚步声从你后面靠近",
+                "你感到了一丝不祥的预感.但什么也没发生"
+            ]
+        },
+
+
+
+        {
+            "hugger": "cjy",
+            "huggee": "ly",
+            "message": [
+                "你与刘雅紧紧地拥抱在了一起",
+                "你与她深情地对视着，害羞地低下了头",
+                "你坐回了你的座位",
+                "她弯下腰来，轻轻地抚摸了一下你的后背",
+                "你倚靠在她胸前，甜蜜贯穿全身，心中幸福无比"
+            ],
+            "confirmed": true
+        },
+        {
+            "hugger": 1,
+            "huggee": "ly",
+            "message": [
+                "你刚抱到刘雅，她就与陈杰宇一起对你说‘太过分了’",
+                "你试图逃跑，但他们俩追打了你很久"
+            ],
+            "eval": "for aa in range(30):{t.goto(random.randint(-300,300),random.randint(-300,300)),t.color(random.randint(0,30)*0.01,random.randint(60,100)*0.01,random.randint(0,30)*0.01),t.write('太过分了',font=(None,30),align='center')}"
+        },
+        {
+            "hugger": "ly",
+            "huggee": "cjy",
+            "message": [
+                "你与陈杰宇紧紧地拥抱在了一起",
+                "你与他深情地对视着，害羞地低下了头",
+                "他坐回了他的座位",
+                "你弯下腰来，轻轻地抚摸了一下他的后背",
+                "他倚靠在你胸前，甜蜜贯穿全身，心中幸福无比"
+            ],
+            "confirmed": true
+        },
+        {
+            "hugger": 2,
+            "huggee": "cjy",
+            "message": [
+                "你刚抱到陈杰宇，他就与刘雅一起对你说“太过分了”",
+                "你试图逃跑，但他们俩追打了你很久"
+            ],
+            "eval": "for aa in range(30):{t.goto(random.randint(-300,300),random.randint(-300,300)),t.color(random.randint(0,30)*0.01,random.randint(60,100)*0.01,random.randint(0,30)*0.01),t.write('太过分了',font=(None,30),align='center')}"
+        },
+        {
+            "hugger": "cjy",
+            "huggee": 2,
+            "message": [
+                "远处传来一声“太过分了”"
+            ],
+            "eval": "for aa in range(30):{t.goto(random.randint(-300,300),random.randint(-300,300)),t.color(random.randint(0,30)*0.01,random.randint(60,100)*0.01,random.randint(0,30)*0.01),t.write('太过分了',font=(None,30),align='center')}"
+        },
+        {
+            "hugger": "ly",
+            "huggee": 1,
+            "message": [
+                "远处传来一声“太过分了”"
+            ],
+            "eval": "for aa in range(30):{t.goto(random.randint(-300,300),random.randint(-300,300)),t.color(random.randint(0,30)*0.01,random.randint(60,100)*0.01,random.randint(0,30)*0.01),t.write('太过分了',font=(None,30),align='center')}"
+        },
+
+
+
+        {
+            "hugger": "lyh",
+            "huggee": "dr",
+            "message": [
+                "你\u0000\u0000根\u0000\u0000本\u0000\u0000不\u0000\u0000敢\u0000\u0000去\u0000\u0000抱\u0000\u0000她\u0000\u0000，\u0000\u0000对\u0000\u0000吗\u0000\u0000？\u0000\u0000"
+            ]
+        },
+        {
+            "hugger": "lyh",
+            "huggee": "lwz",
+            "msgre": "我[^不]*爱(上?)(你|刘伟哲|[Ll][Ww][Zz])",
+            "message": [
+                "你抱住了刘伟哲",
+                "他瞪大了双眼看着你，脸上露出滑稽的微笑"
+            ],
+            "confirmed": true,
+            "eval": "t.goto(-25,-40)\nt.color('purple')\nif('lyh' in CUSTOM_DATA_CONTAINER):t.write('我是双性恋',font=(None,15),align='right')\nelse:t.write('我爱刘伟哲',font=(None,15),align='right')\nCUSTOM_DATA_CONTAINER['lyhGay']=True"
+        },
+        {
+            "hugger": "lyh",
+            "huggee": "lwz",
+            "msgre": "我[^不]*喜欢(你|刘伟哲|[Ll][Ww][Zz])",
+            "message": [
+                "你抱住了刘伟哲",
+                "他瞪大了双眼看着你，脸上露出滑稽的微笑"
+            ],
+            "eval": "t.goto(-25,-40)\nt.color('purple')\nif('lyh' in CUSTOM_DATA_CONTAINER):t.write('我是双性恋',font=(None,15),align='right')\nelse:t.write('我喜欢刘伟哲',align='right')\nCUSTOM_DATA_CONTAINER['lyhGay']=True"
+        },
+        {
+            "hugger": "lyh",
+            "huggee": "lwz",
+            "message": [
+                "你抱住了刘伟哲",
+                "他似乎已经习惯了"
+            ]
+        },
+        {
+            "hugger": "lyh",
+            "huggee": "lxm",
+            "msgre": "我[^不]*(喜欢|爱(上?))(你|刘雪梦|[Ll][Xx][Mm])",
+            "message": [
+                "你那是馋她身子，你下贱"
+            ],
+            "eval": "t.goto(-25,-40)\nt.color(COLORS[1])\nif('lyhGay' in CUSTOM_DATA_CONTAINER):t.write('我是双性恋',font=(None,15),align='right')\nelse:t.write('我有..点喜欢刘雪梦？',align='right')\nCUSTOM_DATA_CONTAINER['lyh']=True"
+        },
+        {
+            "hugger": "dsd",
+            "huggee": "lxm",
+            "message": [
+                "你抱住了娇小的刘雪梦",
+                "她脸红了，对你喊道：",
+                "“渣男！yh、wty甩你了？”"
+            ],
+            "eval": "t.goto(25,-30);t.color(COLORS[find1[2]]);t.write('NO')"
+        },
+        {
+            "hugger": "jbh",
+            "huggee": "lxm",
+            "message": [
+                "你抱住了娇小的刘雪梦",
+                "她脸红了，对你喊道：“流氓！",
+                "mqr说你和董松东对我有大胆的想法”"
+            ],
+            "eval": "t.goto(25,-30);t.color(COLORS[find1[2]]);t.write('NO')"
+        },
+        {
+            "hugger": ["dr", "lxm"],
+            "huggee": "lyh",
+            "message": [
+                "你抱住了刘宇浩",
+                "他差点当场被吓死"
+            ]
+        },
+        {
+            "hugger": "wxr",
+            "huggee": "lyh",
+            "message": [
+                "你抱住了刘宇浩",
+                "他吓了一大跳",
+                "他说：“最想被你抱的人不是我。”"
+            ]
+        },
+        {
+            "hugger": 2,
+            "huggee": "lyh",
+            "message": [
+                "你抱住了刘宇浩",
+                "他吓了一大跳"
+            ]
+        }
+
+
+
+    ],
+    "nameees": {
+        "wyh": "???",
+        "王沿红": "???",
+        "yns": "啊这，二刺螈？",
+        "伊楠斯": "啊这，二刺螈？",
+        "mgl": "啊这，二刺螈？",
+        "梅古里": "啊这，二刺螈？"
+    }
+}
