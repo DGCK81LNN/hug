@@ -17,9 +17,9 @@
             "zbh": "张博浩",
             "dsd": "董松东",
             "lyh": "刘宇浩",
-            "lwz": "刘伟哲",
-            "lzx": "刘哲学",
-            "qzq": "齐哲强",
+            "lwz": "刘伟志",
+            "lzx": "刘志学",
+            "qzq": "齐志强",
             "ljs": "刘杰松",
 
             "yns": "伊楠斯"
@@ -163,7 +163,7 @@
             "hugger": "wxr",
             "huggee": "lwz",
             "message": [
-                "你抱了刘伟哲一下",
+                "你抱了刘伟志一下",
                 "他拍了你一下，他喊道：“大仙快来管管你媳妇儿。”",
                 "他试图逃跑，马强瑞也赶了过来",
                 "马强瑞像一堵墙一样出现在他面前，你从他的后面追了上来",
@@ -406,9 +406,9 @@
         {
             "hugger": "lyh",
             "huggee": "lwz",
-            "msgre": "我[^不]*爱(上?)(你|刘伟哲|[Ll][Ww][Zz])",
+            "msgre": "我[^不]*爱(上?)(你|刘伟志|[Ll][Ww][Zz])",
             "message": [
-                "你抱住了刘伟哲",
+                "你抱住了刘伟志",
                 "他瞪大了双眼看着你，脸上露出滑稽的微笑"
             ],
             "confirmed": true,
@@ -417,9 +417,9 @@
         {
             "hugger": "lyh",
             "huggee": "lwz",
-            "msgre": "我[^不]*喜欢(你|刘伟哲|[Ll][Ww][Zz])",
+            "msgre": "我[^不]*喜欢(你|刘伟志|[Ll][Ww][Zz])",
             "message": [
-                "你抱住了刘伟哲",
+                "你抱住了刘伟志",
                 "他瞪大了双眼看着你，脸上露出滑稽的微笑"
             ],
             "eval": "t.goto(-25,-40)\nt.color('purple')\nif('lyh' in CUSTOM_DATA_CONTAINER):t.write('我是双性恋',font=(None,15),align='right')\nelse:t.write('我喜欢刘伟哲',align='right')\nCUSTOM_DATA_CONTAINER['lyhGay']=True"
@@ -428,7 +428,7 @@
             "hugger": "lyh",
             "huggee": "lwz",
             "message": [
-                "你抱住了刘伟哲",
+                "你抱住了刘伟志",
                 "他似乎已经习惯了"
             ]
         },
