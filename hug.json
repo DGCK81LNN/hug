@@ -412,7 +412,7 @@
                 "他瞪大了双眼看着你，脸上露出滑稽的微笑"
             ],
             "confirmed": true,
-            "eval": "t.goto(-25,-40)\nt.color('purple')\nif('lyh' in CUSTOM_DATA_CONTAINER):t.write('我是双性恋',font=(None,15),align='right')\nelse:t.write('我爱刘伟哲',font=(None,15),align='right')\nCUSTOM_DATA_CONTAINER['lyhGay']=True"
+            "eval": "t.goto(-25,-40)\nt.color('purple')\nif('lyh' in CUSTOM_DATA_CONTAINER):t.write('我是双性恋',font=(None,15),align='right')\nelse:t.write('我爱刘伟志',font=(None,15),align='right')\nCUSTOM_DATA_CONTAINER['lyhGay']=True"
         },
         {
             "hugger": "lyh",
@@ -422,7 +422,7 @@
                 "你抱住了刘伟志",
                 "他瞪大了双眼看着你，脸上露出滑稽的微笑"
             ],
-            "eval": "t.goto(-25,-40)\nt.color('purple')\nif('lyh' in CUSTOM_DATA_CONTAINER):t.write('我是双性恋',font=(None,15),align='right')\nelse:t.write('我喜欢刘伟哲',align='right')\nCUSTOM_DATA_CONTAINER['lyhGay']=True"
+            "eval": "t.goto(-25,-40)\nt.color('purple')\nif('lyh' in CUSTOM_DATA_CONTAINER):t.write('我是双性恋',font=(None,15),align='right')\nelse:t.write('我喜欢刘伟志',align='right')\nCUSTOM_DATA_CONTAINER['lyhGay']=True"
         },
         {
             "hugger": "lyh",
